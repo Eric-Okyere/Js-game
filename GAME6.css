@@ -1,0 +1,246 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+   
+}
+body{
+    background-color: rgb(19, 31, 2);
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    top: -50px;
+}
+#btn1{
+    position: relative;
+    left: 24vh;
+    
+}
+#btn1,#btn{
+    position: relative;
+    top: -5px;
+    justify-self:flex-end;
+}
+
+
+.colors{
+    animation:blinking 2.5s infinite;
+    font-size: 30px;
+}
+
+@keyframes blinking{
+    0%{color: green}
+    47%{color: orange; }
+    62%{color: red; }
+    85%{color: rgb(118, 231, 66); }
+    80%{color: white;}
+    97%{color: blue;}
+    100%{color: chocolate;}
+}
+
+
+.animate{
+    animation: 5000ms move infinite;
+}
+
+@keyframes move{
+    from{top: 270px;}
+    30%{top: 0px;}
+    70%{top: 100px;}
+    to{top: 200px;}
+}
+
+.animate2{
+    animation: 2s jump infinite;
+}
+
+@keyframes jump{
+    from{top: 270px;}
+    30%{top: 0px;}
+    70%{top: 100px;}
+    to{top: 200px;}
+}
+
+
+
+
+
+#main{
+    background-color: blueviolet;
+    width: 65vh;
+   position: relative;
+   left: 30%;
+  height: 86vh;
+  top: 5px;
+}
+
+#main::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: -30px;
+    transform-origin: right;
+    border-bottom: none;
+    transform: skewY(45deg);
+    transition: 1s;
+    border: 3px dotted aqua;
+    }
+
+    #main::after{
+        content: '';
+        position: absolute;
+        background-color: black;
+        top: -40px;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        transform-origin: bottom;
+        transform: skewX(45deg);
+        border: 3px dotted aqua;
+    
+    }
+
+
+h1{
+    background-color: aqua;
+    width: 60vh;
+    left: 10px;
+    position: relative;
+    font-weight: bold;
+}
+h1:after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    transform-origin: bottom;
+    transform: skewX(-20deg);
+    border: 1px dotted black;
+
+}
+.h1{
+    letter-spacing: 2px;
+}
+
+
+
+
+p{
+    background-color:black;
+    width: 60vh;
+    left: 10px;
+    position: relative;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+}
+
+    p::after{
+        content: '';
+        position: absolute;
+        background-color: aqua;
+        top: -20px;
+        left: 0;
+        width: 100%;
+        height: 18px;
+        transform-origin: bottom;
+        transform: skewX(-20deg);
+        border: 1px dotted black;
+    
+    }
+p::before{
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 100%;
+        background-color: aqua;
+        top: 0;
+        left: -35px;
+        transform-origin:bottom;
+        transform: skewY(0deg);
+        }
+h1::before{
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 100%;
+        background-color: aqua;
+        top: 0;
+        left: -35px;
+        transform-origin:bottom;
+        transform: skewY(0deg);
+        }
+    
+#del{
+    background-color: aqua;
+    letter-spacing: 3px;
+    transition: 0.2s;
+}
+#del:hover{
+    color: brown;
+    background-color: black;
+    
+}
+
+.but:hover{
+color: red;
+/* background-color: black; */
+}
+
+.but::before{
+content: "";
+position: absolute;
+left: 0;
+width: 100%;
+height: 0;
+background-color: yellow;
+z-index: -1;
+transition: 00.8s;
+border-radius: 0 0 50% 50%;
+}
+
+.but:hover::before{
+    height: 380%;
+}
+
+    button{
+        background-color: aqua;
+        height: 6vh;
+        font-size: large;
+        font-weight: bold;
+        font-family:'Courier New', Courier, monospace;
+        position: relative;
+    left: 2vh;
+        
+        border-radius: 10px;
+        border: 3px solid yellow;
+        position: relative;
+        top: 50px;
+        transition: 0.8s;
+    }
+input{
+    position: relative;
+    border-radius: 10px;
+    border: 3px solid aqua;
+    left: 2vh;
+    height: 5vh;
+    top: 5vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+input::placeholder{
+    font-size: large;
+    color: blueviolet;
+}
+
+
